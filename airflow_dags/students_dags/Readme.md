@@ -2,7 +2,7 @@
 
 ```
 
-├── students_dags
+└── students_dags
     └── Readme.md
 
 ```
@@ -16,11 +16,12 @@
 Например:
 Студент Иванов И.И. в своей папке создал даг homework_9, тогда дерево каталога будет выглядеть следующим образом
 
-├── students_dags
+```
+└── students_dags
     └── Readme.md
     └── ivanov_ii
         └── sd_iii_homework_9
             ├── sd_iii_homework_9.py
             └── subtask_scripts
                 └── subtask_from_folder.py
-        
+```     
