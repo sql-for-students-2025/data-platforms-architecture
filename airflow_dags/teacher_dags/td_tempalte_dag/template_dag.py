@@ -2,6 +2,10 @@ from airflow import DAG
 from airflow.utils.dates import days_ago
 from airflow.operators.python_operator import PythonOperator
 import datetime
+import sys, os
+
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__))) #немного магии, добавляем путь, чтоб импортировать подзадачу из папки subtask_scripts
+from subtask_scripts import subtask_from_folder #импортируем файл с функцией
 
 
 default_args = {
@@ -46,5 +50,11 @@ with DAG(
         op_kwargs={'arg': 'Unknown'}, # таким образом можно передать именованные аргументы в функцию
         dag=dag #объект дага, к которому будет привязана задача
     )
+    
+    task_3 = PythonOperator(#так как у нас функция написанная на питоне, то используем соответствующий оператор
+        task_id='test_from_subrtask',# уникальное, в рамках дага, наименовние задачи
+        python_callable=subtask_from_folder.task_from_folder, #имя функции, которая будет исполняться оператором
+        dag=dag #объект дага, к которому будет привязана задача
+    )
 
-    task_1 >> task_2 #таким образом мы выстраиваем последовательное выполнение задач
+    task_1 >> task_2 >> task_3 #таким образом мы выстраиваем последовательное выполнение задач
