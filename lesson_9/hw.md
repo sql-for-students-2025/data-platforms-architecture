@@ -26,7 +26,33 @@ access_key = Variable.get('s3_dad_ksu_dataplatform_access_key')
 secret_key = Variable.get('s3_dad_ksu_dataplatform_secret_key')
 rabbitmq_svc_password = Variable.get('rabbit_mq_svc_password')
 rabbit_mq_svc_login = Variable.get('rabbit_mq_svc_login')
+rabbit_mq_host = Variable.get('rabbit_mq_host')
+clickhouse_svc_login = Variable.get('clickhouse_tech_user_account')
+clickhouse_svc_password = Variable.get('clickhouse_tech_user_password')
+clickhouse_host = Variable.get('clickhouse_port')
 
+```
+
+Пример создания подключения к Clickhouse с помощью библиотеки clickhouse-driver
+
+```python
+from clickhouse_driver.client import Client
+
+# если будете использовать pandas, то эта настройка поможет избежать ошибок
+settings = {
+    'use_numpy': True
+}
+
+with Client(
+    host=clickhouse_host, 
+    гser=clickhouse_svc_login, 
+    password=clickhouse_svc_password, 
+    database='<your_login>_db'
+    settings=settings, #если pandas не используете можно удалить этот параметр
+    port=9000
+    ) as client:
+
+    client.execute(sql="select 1;")
 ```
 
 Пример создания таблицы на Clickhouse
