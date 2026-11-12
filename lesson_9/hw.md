@@ -29,7 +29,7 @@ rabbit_mq_svc_login = Variable.get('rabbit_mq_svc_login')
 rabbit_mq_host = Variable.get('rabbit_mq_host')
 clickhouse_svc_login = Variable.get('clickhouse_tech_user_account')
 clickhouse_svc_password = Variable.get('clickhouse_tech_user_password')
-clickhouse_host = Variable.get('clickhouse_port')
+clickhouse_host = Variable.get('clickhouse_host')
 
 ```
 
