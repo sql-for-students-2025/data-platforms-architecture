@@ -7,27 +7,27 @@
 **Тема 1. Эволюция архитектур и OLTP vs OLAP**
 1. Отличие OLTP от OLAP.
 2. Для чего нужен Data Warehouse (DWH).
-3. Концепция Single Source of Truth.
-4. Для чего нужен Data Lake.
-5. Отличие Data Lake от DWH.
-6. Концепция Lakehouse.
-7. Что такое MPP (Massively Parallel Processing).
-8. Отличие Batch от Streaming обработки.
-9. Плюсы и минусы Batch.
-10. Плюсы и минусы Streaming.
-11. Концепция Data Mesh.
-12. Что такое Data Mart.
+3. Для чего нужен Data Lake.
+4. Отличие Data Lake от DWH.
+5. Концепция Lakehouse.
+6. Что такое MPP (Massively Parallel Processing).
+7. Отличие Batch от Streaming обработки.
+8. Плюсы и минусы Batch.
+9. Плюсы и минусы Streaming.
+10. Концепция Data Mesh.
+11. Что такое Hadoop, какие особенности он имеет
+12. Что такое S3, какие особенности он имеет
+13. В чем отличие Hadoop и S3
 
 **Тема 2. Компоненты платформы данных**
-13. Что такое Data Platform.
-14. Основные слои Data Platform (Sources, Ingestion, Storage, Processing, Serving).
-15. Роль Ingestion.
-16. Понятие Latency / Data freshness.
-17. Роль слоя Storage.
-18. Роль слоя Processing (ETL/ELT).
-19. Роль слоя Serving.
-20. Зачем нужен Metadata / Data Catalog.
-21. Что такое Data Lineage.
+14. Что такое Data Platform.
+15. Основные слои Data Platform (Sources, Ingestion, Storage, Processing, Serving).
+16. Роль Ingestion.
+17. Понятие Latency / Data freshness.
+18. Роль слоя Storage.
+19. Роль слоя Processing (ETL/ELT).
+20. Роль слоя Serving.
+21. Зачем нужен Metadata / Data Catalog.
 22. Основы Security & Governance.
 23. Основы Observability (Freshness, Quality, Availability).
 
